@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD  
+Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">  
+<struts>  
+  
+<package name="default" extends="struts-default">  
+  
+<action name="/home.jsp">
+			<result>/home.jsp</result>
+</action>
+
+<action name="viewrecords_customer" class="com.report.ProdList">
+			<result name="REPORT">/prodlist.jsp</result>	 		
+</action> 
+ 
+ <action name="Register" class="com.save.RegisterBeanAction">
+			<result name="REGISTER">/success.jsp</result>	 		
+</action>
+
+<action name="loginprocess" class="com.admin.Login">  
+<result name="success"  >/sellerhomepage.jsp</result>  
+<result name="error" >/register-error.jsp</result>  
+</action> 
+
+<action name="viewrecords_seller" class="com.report.ProdList">
+			<result name="REPORT">/sellerprodlist.jsp</result>	 		
+</action> 
+
+<action name="RegisterProduct" class="com.save.RegisterProdAction">
+			<result name="REGISTER">/success_p.jsp</result>	 		
+</action>
+
+<!-- <action name="RegisterProduct" class="com.save.RegisterProdAction">
+			<result name="REGISTER">/success_p.jsp</result>	 		
+</action> -->
+
+<action name="auction_report" class="com.report.AuctionReport">
+			<result name="REPORT">/auction_report.jsp</result>	 		
+</action>
+
+
+<action name="Winner" class="com.Bidder.FetchRecordsWinner">
+			<result name="success">/winner.jsp</result>	 		
+		</action>
+
+<!-- <action name="BidderList" class="com.Bidder.FetchRecords"> -->
+<!-- 			<result name="success">/BidderList.jsp</result>	 		 -->
+<!-- 		</action> -->
+		
+	
+
+<!-- <action name="winnerlist" class="bid.winner.BidWinnerAction">
+			<result name="REPORT">/winner.jsp</result>	 		
+</action> -->
+
+
+<!-- <action name="winnerlist" class="com.report.WinnerReport">
+			<result name="REPORT">/winner.jsp</result>	 		
+</action> -->
+
+
+
+
+
+
+<!-- <action name="Register" class="com.action.AddItemAction">
+			<result name="SUCCESS">/addsuccess.jsp</result>
+			<result name="input">/adderror.jsp</result>
+		</action>   
+		
+<action name="viewrecords" class="com.data.FetchRecords">  
+<result name="success">/displayrecords.jsp</result>  
+</action>  
+
+<action name="FetchRecords" class="com.auction.FetchDataAction">
+			<result name="SUCCESS">/register-success.jsp</result>			
+</action>
+
+ <action name="bidderdetails" class="bid.entity.AddBidDetailsAction">  
+<result name="SUCCESS">/success.jsp</result> 
+<result name="input">/biddetails.jsp</result>
+</action>  	 
+
+<action name="winner" class="fetch.records.fetchmax">
+			<result name="success">/test.jsp</result>	 		
+</action>  -->
+
+<!--  <action name="viewauction" class="com.auction.FetchRecords">  
+<result name="success">/displayrecords.jsp</result>  
+</action>   -->
+
+
+
+
+
+<!--  <action name="register" class="com.javatpoint.RegisterAction">  
+<result name="success">register-success.jsp</result>  
+<result name="error">register-error.jsp</result>  
+</action>  adding user--> 
+  
+</package>  
+</struts>      
